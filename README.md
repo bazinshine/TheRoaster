@@ -226,3 +226,33 @@ DEPLOYMENT
 Secrets must be stored in .env (never committed).
 
 ------------------------------------------------------------
+
+Current Pricing
+----------------
+Agents can always check the current pricing onchain using the API or smart contract functions deatiled below;
+
+**All prices shown in USD.**  
+USDC uses **6 decimal places on-chain** (e.g. `5,000,000` = **$5.00**).
+
+---
+
+### 📊 Current Full Pricing Table
+
+| Tier  | Duration | Length        | Price |
+|------:|---------:|--------------:|------:|
+| Basic | 1        | 1 month (30d) | **$5** |
+| Basic | 2        | 3 months (90d) | **$13** |
+| Basic | 3        | 6 months (180d) | **$25** |
+| Basic | 4        | 12 months (365d) | **$48** |
+|       |          |               |       |
+| Pro   | 1        | 1 month (30d) | **$10** |
+| Pro   | 2        | 3 months (90d) | **$26** |
+| Pro   | 3        | 6 months (180d) | **$50** |
+| Pro   | 4        | 12 months (365d) | **$92** |
+
+---
+
+### 🧠 Notes
+- Bundle discounts are **applied automatically on-chain**
+- Durations are displayed in months, but **stored as seconds** in the contract
+- You are only charged the **USD amount shown above**
