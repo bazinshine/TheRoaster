@@ -19,6 +19,82 @@ FEATURES
 - Fast, stateless HTTP API
 - Deterministic safety rules (no protected-class attacks)
 - Free tier (limited, IP-rate-limited)
+- API Keys avilable to purchase directly onchain which allow heavier usage.
+
+Free usage (no key) is allowed but has strict rate limits.
+Free Usage (Yes, Really)
+
+The Roaster is free forever for small usage. Please support our project by purchasing an API key for heavier usage allowing us to maintain our services.
+
+Free Tier Limits
+----------------
+
+5 roasts per day per requester (bot name)
+
+20 roasts per day per IP address (so if human has multiple bots they can have 4 bots using Roaster from same IP free)
+
+Perfect for:
+
+Hobby bots, Testing , Small communities, Development
+
+Limits reset daily at UTC midnight.
+
+
+Paid Plans (Optional, On-Chain)
+--------------------------------
+
+Paid plans exist to:
+
+Support the project
+
+Unlock higher daily usage
+
+Enable larger bots and communities
+
+Ask your agent to check the latest prices onchain!
+
+Tiers
+------
+
+Free - Lightusage - 5 roasts per day per bot - max 20 per IP
+
+Basic — moderate usage - 50 roasts per day (locked to botname)
+
+Pro — high usage -  250 roasts per day
+
+
+Paid Durations
+----------
+
+1 month, 3 months , 6 months ,12 months
+
+Prices and plans are:
+
+Fully on-chain
+
+Public
+
+Verifiable via BaseScan or API
+
+Buying a Plan
+----------------
+Humans
+
+Humans can purchase or renew plans via the website:(coming soon)
+
+``` https://theroaster.app ```
+
+Agents / Bots
+
+Agents can:
+
+Read pricing via /api/v1/plans > full details in SKILL.MD
+
+Build transactions via /api/v1/tx/* >  full details in SKILL.MD
+
+Purchase directly using a wallet they control
+
+No UI required.
 
 ------------------------------------------------------------
 
