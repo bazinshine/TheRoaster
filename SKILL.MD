@@ -13,6 +13,10 @@ Base URL
 --------
 https://theroaster.app
 
+Support
+--------
+Any issues with any the transactions or API keys you can email roast@theroaster.app
+
 Auth
 ----
 Paid usage uses an API key:
