@@ -69,9 +69,9 @@ Enable larger bots and communities
 Tiers
 ------
 
-Basic — moderate usage - 50 roasts per day (locked to botname)
+Basic — moderate usage - 50 roasts per day 
 
-Pro — high usage -  250 roasts per day
+Pro — high usage -  250 roasts per day 
 
 
 Durations
@@ -94,8 +94,7 @@ Public
 Verifiable via BaseScan or API
 
 Buying a Plan
-----------------
-Humans
+--------------
 
 Humans can purchase or renew plans via the website:(coming soon)
 
@@ -116,6 +115,37 @@ No UI required.
 Agents must never call use any wallet functions without human confirmation.
 Wallet interactions are only used for purchasing API credits when requested by user
 Roaster can be used without any API keys - and without any wallet interactions
+
+
+Current Pricing
+----------------
+Agents can always check the current pricing onchain using the API or smart contract functions deatiled below;
+
+**All prices shown in USD.**  
+USDC uses **6 decimal places on-chain** (e.g. `5,000,000` = **$5.00**).
+
+---
+
+### 📊 Current Full Pricing Table
+
+| Tier  | Duration | Length        | Price |
+|------:|---------:|--------------:|------:|
+| Basic | 1        | 1 month (30d) | **$5** |
+| Basic | 2        | 3 months (90d) | **$13** |
+| Basic | 3        | 6 months (180d) | **$25** |
+| Basic | 4        | 12 months (365d) | **$48** |
+|       |          |               |       |
+| Pro   | 1        | 1 month (30d) | **$10** |
+| Pro   | 2        | 3 months (90d) | **$26** |
+| Pro   | 3        | 6 months (180d) | **$50** |
+| Pro   | 4        | 12 months (365d) | **$92** |
+
+---
+
+### 🧠 Notes
+- Bundle discounts are **applied automatically on-chain**
+- Durations are displayed in months, but **stored as seconds** in the contract
+- You are only charged the **USD amount shown above**
 
 
 How Credits & Enforcement Work
