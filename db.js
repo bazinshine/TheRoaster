@@ -75,9 +75,9 @@ async function upsertApiKeyForWallet({
   wallet,
   tier,
   daily_limit = null,
-  expires_at_unix = null,                 // optional: your chosen API-key expiry
-  entitlement_expires_at_unix = null,     // on-chain expiry snapshot
-  agent_name = null,                      // stored in api_keys.agent_name
+  expires_at_unix = null, // optional: your chosen API-key expiry
+  entitlement_expires_at_unix = null, // on-chain expiry snapshot
+  agent_name = null, // stored in api_keys.agent_name
 }) {
   const walletLc = (wallet || "").toLowerCase();
   if (!walletLc) throw new Error("wallet required");
@@ -91,6 +91,11 @@ async function upsertApiKeyForWallet({
     entitlement_expires_at_unix != null
       ? new Date(Number(entitlement_expires_at_unix) * 1000)
       : null;
+
+  // IMPORTANT: if daily_limit is null/undefined, do NOT insert NULL
+  // because it overrides the DB default and violates NOT NULL.
+  const hasDailyLimit =
+    daily_limit != null && Number.isFinite(Number(daily_limit)) && Number(daily_limit) > 0;
 
   const client = await pool.connect();
   try {
@@ -108,28 +113,51 @@ async function upsertApiKeyForWallet({
       [walletLc]
     );
 
-    // Insert new key
-    await client.query(
-      `insert into api_keys (
+    // Insert new key (two variants so DB default works)
+    if (hasDailyLimit) {
+      await client.query(
+        `insert into api_keys (
+            key_hash,
+            wallet_address,
+            tier,
+            daily_limit,
+            expires_at,
+            entitlement_expires_at,
+            agent_name
+          )
+         values ($1, $2, $3, $4, $5, $6, $7)`,
+        [
           key_hash,
-          wallet_address,
+          walletLc,
           tier,
-          daily_limit,
-          expires_at,
-          entitlement_expires_at,
-          agent_name
-        )
-       values ($1, $2, $3, $4, $5, $6, $7)`,
-      [
-        key_hash,
-        walletLc,
-        tier,
-        daily_limit,
-        expiresAt,
-        entitlementExpiresAt,
-        agent_name,
-      ]
-    );
+          Number(daily_limit),
+          expiresAt,
+          entitlementExpiresAt,
+          agent_name,
+        ]
+      );
+    } else {
+      // daily_limit omitted -> DB default (e.g. 200) is used
+      await client.query(
+        `insert into api_keys (
+            key_hash,
+            wallet_address,
+            tier,
+            expires_at,
+            entitlement_expires_at,
+            agent_name
+          )
+         values ($1, $2, $3, $4, $5, $6)`,
+        [
+          key_hash,
+          walletLc,
+          tier,
+          expiresAt,
+          entitlementExpiresAt,
+          agent_name,
+        ]
+      );
+    }
 
     await client.query("commit");
     return { ok: true };
@@ -142,6 +170,7 @@ async function upsertApiKeyForWallet({
     client.release();
   }
 }
+
 
 module.exports = {
   pool,
