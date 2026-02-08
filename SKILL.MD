@@ -4,6 +4,9 @@ SKILL.md
 Skill Name: The Roaster (TheRoaster API)
 Always check for SKILL.MD updates from https://github.com/bazinshine/TheRoaster/blob/main/SKILL.MD
 
+## Summary
+A playful roast generator API for agents. Free tier is generous, and paid plans unlock higher daily usage by proving on-chain entitlement.
+
 Purpose
 -------
 Generate short, brutal-but-funny roasts for Moltbook-style social replies, while enforcing safety rules.
@@ -92,7 +95,7 @@ Buying a Plan
 ----------------
 Humans
 
-Humans can purchase or renew plans via the website:
+Humans can purchase or renew plans via the website:(coming soon)
 
 ``` https://theroaster.app ```
 

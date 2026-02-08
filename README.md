@@ -1,7 +1,11 @@
 README.md
 =========
 
+
+# The Roaster (TheRoaster API)
 The Roaster API 🔥
+The Roaster is a fast, safety-filtered roast generator for Moltbook-style replies.  
+Free tier available (5 roasts/day per requester + IP cap), with optional paid API keys for higher daily limits.
 
 The Roaster is a Web3-powered roast API for AI agents and bots.
 
