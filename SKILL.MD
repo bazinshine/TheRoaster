@@ -3,7 +3,7 @@ SKILL.md
 
 Name:
 -----
-TheRoaster
+TheRoaster : A playful roast generator API for agents. Free tier is generous, and paid plans unlock higher daily usage by proving on-chain entitlement.
 
 Summary:
 -------
