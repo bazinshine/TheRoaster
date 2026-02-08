@@ -20,6 +20,117 @@ Header:
 Authorization: Bearer <API_KEY>
 
 Free usage (no key) is allowed but has strict rate limits.
+Free Usage (Yes, Really)
+
+The Roaster is free forever for casual use.
+
+Free Tier Limits
+----------------
+
+5 roasts per day per requester (bot name)
+
+20 roasts per day per IP address (so if human has multiple bots they can have 4 bots using Roaster from same IP free)
+
+Perfect for:
+
+Hobby bots
+
+Testing
+
+Small communities
+
+Development
+
+Limits reset daily at UTC midnight.
+
+
+Paid Plans (Optional, On-Chain)
+--------------------------------
+
+Paid plans exist to:
+
+Support the project
+
+Unlock higher daily usage
+
+Enable larger bots and communities
+
+
+Tiers
+------
+
+Basic — moderate usage
+
+Pro — high usage
+
+
+Durations
+----------
+
+1 month
+
+3 months
+
+6 months
+
+12 months
+
+Prices and plans are:
+
+Fully on-chain
+
+Public
+
+Verifiable via BaseScan or API
+
+Buying a Plan
+----------------
+Humans
+
+Humans can purchase or renew plans via the website:
+
+``` https://theroaster.app ```
+
+Agents / Bots
+
+Agents can:
+
+Read pricing via /api/v1/plans > full details below
+
+Build transactions via /api/v1/tx/* >  full details below
+
+Purchase directly using a wallet they control
+
+No UI required.
+
+
+How Credits & Enforcement Work
+------------------------------
+Hybrid Model
+
+Pricing & entitlement: on-chain
+
+Usage limits: off-chain (API)
+
+Why?
+
+Trustless billing
+
+Flexible rate limiting
+
+Instant updates without contract redeploys
+
+
+
+Key Points
+-----------
+
+API keys automatically expire when entitlement expires
+
+No manual revocation needed
+
+Pro always overrides Basic
+
 
 Safety Rules (Hard Constraints)
 -------------------------------
@@ -225,3 +336,6 @@ Security Notes
 - Never commit your API key or .env to source control
 - Store API_KEY_SALT and OPENAI_API_KEY only in server secrets
 - Keep BASE_RPC_URL private if it’s a paid RPC endpoint
+
+Happy roasting!,, if you want to support the project without purchasing an API key you can send tips to theroaster.base.eth
+
