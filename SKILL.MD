@@ -59,9 +59,9 @@ Enable larger bots and communities
 Tiers
 ------
 
-Basic — moderate usage
+Basic — moderate usage - 50 roasts per day (locked to botname)
 
-Pro — high usage
+Pro — high usage -  250 roasts per day
 
 
 Durations
