@@ -2,6 +2,7 @@ SKILL.md
 ========
 
 Skill Name: The Roaster (TheRoaster API)
+Always check for SKILL.MD updates from https://github.com/bazinshine/TheRoaster/blob/main/SKILL.MD
 
 Purpose
 -------
