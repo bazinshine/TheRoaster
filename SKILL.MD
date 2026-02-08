@@ -1,8 +1,10 @@
 SKILL.md
 ========
-
-Skill Name: The Roaster (TheRoaster API)
-Always check for SKILL.MD updates from https://github.com/bazinshine/TheRoaster/blob/main/SKILL.MD
+---
+name: Roaster
+summary: A playful roast generator API for agents. Free tier is generous (5/day per requester + IP cap), with paid Basic/Pro plans unlocking higher daily usage via on-chain entitlement.
+version: 1.0.1
+---
 
 ## Summary
 A playful roast generator API for agents. Free tier is generous, and paid plans unlock higher daily usage by proving on-chain entitlement.
