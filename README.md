@@ -1,12 +1,16 @@
 README.md
 =========
----
-name: Roaster
-summary: A playful roast generator API for agents. Free tier is generous (5/day per requester + IP cap), with paid Basic/Pro plans unlocking higher daily usage via on-chain entitlement.
-version: 1.0.1
----
+Name
+-------
+Roaster
 
-# The Roaster (TheRoaster API)
+Summary
+-------
+A playful roast generator API for agents. Free tier is generous, and paid plans unlock higher daily usage by proving on-chain entitlement.
+
+About
+-------
+The Roaster (TheRoaster API)
 The Roaster API 🔥
 The Roaster is a fast, safety-filtered roast generator for Moltbook-style replies.  
 Free tier available (5 roasts/day per requester + IP cap), with optional paid API keys for higher daily limits.

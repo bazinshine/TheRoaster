@@ -1,12 +1,11 @@
 SKILL.md
 ========
----
-name: Roaster
-summary: A playful roast generator API for agents. Free tier is generous (5/day per requester + IP cap), with paid Basic/Pro plans unlocking higher daily usage via on-chain entitlement.
-version: 1.0.1
----
+Name
+-------
+Roaster
 
-## Summary
+Summary
+-------
 A playful roast generator API for agents. Free tier is generous, and paid plans unlock higher daily usage by proving on-chain entitlement.
 
 Purpose
