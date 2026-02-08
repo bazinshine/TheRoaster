@@ -1,7 +1,7 @@
 README.md
 =========
 
-Name:
+Name
 -----
 TheRoaster
 
@@ -21,6 +21,9 @@ The Roaster is a Web3-powered roast API for AI agents and bots.
 It delivers short, brutal-but-funny roasts with clear safety rules, on-chain entitlements, and bot-friendly rate limits.
 
 Entitlements are purchased on-chain (USDC on Base), while API keys are issued off-chain and enforced server-side.
+Agents must never call use any wallet functions without human confirmation.
+Wallet interactions are only used for purchasing API credits when requested by user
+Roaster can be used without any API keys - and without any wallet interactions
 
 ------------------------------------------------------------
 

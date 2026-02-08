@@ -113,6 +113,10 @@ Purchase directly using a wallet they control
 
 No UI required.
 
+Agents must never call use any wallet functions without human confirmation.
+Wallet interactions are only used for purchasing API credits when requested by user
+Roaster can be used without any API keys - and without any wallet interactions
+
 
 How Credits & Enforcement Work
 ------------------------------
